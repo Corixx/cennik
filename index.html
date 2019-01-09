@@ -1,0 +1,203 @@
+<head>
+	<meta charset="utf-8">
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+		}
+
+		.items .we {
+			display: none;
+		}
+
+		.items #default {
+			display: block;
+		}
+
+		.items .we:target~#default {
+			display: none;
+		}
+
+		.items .we:target {
+			display: block;
+		}
+
+		.items {
+			float: left;
+			width: 65%;
+		}
+
+		.vertical-menu {
+			width: 35%;
+			float: left;
+		}
+
+		.vertical-menu a {
+			display: block;
+			padding: 20px;
+			text-decoration: none;
+
+		}
+
+		.vertical-menu a:hover {
+			background-color: rgb(236, 0, 98);
+			color: white
+		}
+
+		.vertical-menu .class1 {
+			background-color: #eee;
+			color: black;
+		}
+
+		.vertical-menu .class2 {
+			background-color: rgb(236, 0, 98);
+			color: white;
+		}
+
+		.container {
+			margin: 0;
+			background-color: #eee;
+			width: 60%;
+			height: 100%;
+			margin: auto;
+		}
+
+		#cennik {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#cennik td {
+			border: none;
+			padding: 12px;
+			width: 65%;
+		}
+
+		#cennik tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#cennik tr:hover {
+			background-color: #ddd;
+			color: rgb(236, 0, 98);
+		}
+
+		#price {
+			text-align: right;
+			font-weight: bold;
+
+		}
+	</style>
+	<script>
+		function toggleClass(el) {
+			var kids = document.getElementById('menu1').children;
+			for (var i = 0; i < kids.length; i++) {
+				kids[i].className = "class1";
+			}
+			el.className = "class2";
+		}
+	</script>
+</head>
+
+<body style="margin: 0;">
+	<div class="container">
+		<div class="vertical-menu" id="menu1">
+			<a class="class2" onclick="toggleClass(this)" href="#default">DIAGNOSTYKA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#w">LECZENIE BEZ BÓLU - ZNIECZULENIA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#e">ENDODONCJA POD MIKROSKOPEM</a>
+			<a class="class1" onclick="toggleClass(this)" href="#r">SPECJALISTYCZNA PERIODONTOLOGIA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#t">STOMATOLOGIA ESTETYCZNA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#p">STOMATOLOGIA LASEROWA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#z">CHIRURGIA STOMATOLOGICZNA</a>
+			<a class="class1" onclick="toggleClass(this)" href="#x">CHIRURGIA STOMATOLOGICZNA</a>
+
+		</div>
+
+
+
+		<div class="items">
+				<div class="we" id="default">
+						<table id="cennik">
+							<tr>
+								<td>1</td>
+								<td id="price">7474</td>
+							</tr>
+		
+		
+						</table>
+					</div>
+
+			<div class="we" id="w">
+				<table id="cennik">
+					<tr>
+						<td>2</td>
+						<td id="price">7474</td>
+					</tr>
+
+
+				</table>
+			</div>
+			<div class="we" id="e">
+				<table id="cennik">
+					<tr>
+						<td>3</td>
+						<td id="price">7474</td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="we" id="r">
+				<table id="cennik">
+					<tr>
+						<td>4</td>
+						<td id="price">7474</td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="we" id="t">
+				<table id="cennik">
+					<tr>
+						<td>5</td>
+						<td id="price">7474</td>
+					</tr>
+
+
+				</table>
+			</div>
+			<div class="we" id="p">
+				<table id="cennik">
+					<tr>
+						<td>6</td>
+						<td id="price">7474</td>
+					</tr>
+
+
+				</table>
+			</div>
+			<div class="we" id="z">
+				<p>pusto</p>
+				<table id="cennik">
+					<tr>
+						<td>7</td>
+						<td id="price">7474</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="we" id="x">
+				<p>pusto</p>
+				<table id="cennik">
+					<tr>
+						<td>7</td>
+						<td id="price">7474</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+		</div>
+	</div>
+</body>
